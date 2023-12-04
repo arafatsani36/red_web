@@ -4,34 +4,39 @@ import { LuDot } from "react-icons/lu";
 import { BsChat, BsThreeDots } from "react-icons/bs";
 import { AiOutlineRetweet } from "react-icons/ai";
 import { IoMdStats } from "react-icons/io";
-import { CiBookmark } from "react-icons/ci";
+import { CiBookmark, CiSettings } from "react-icons/ci";
 import { LuShare } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
+import { HiOutlineGif } from "react-icons/hi2";
+import { TfiGallery } from "react-icons/tfi";
 
 const Main = () => {
     return (
     <main className="flex w-full h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-200">
-            <div>
-                <div>
-                  
+            <div className="flex items-center justify-between pt-5 pb-3 md:pl-8 pr-2 border-b border-gray-200">
+                <div className=" cursor-pointer hover:text-slate-500 duration-200 transition">
+                  <h2 className=" text-base font-bold">For you</h2>
+                </div>
+                <div className=" cursor-pointer hover:text-slate-500 duration-200 transition ">
+                  <h2 className=" text-base font-bold">Following</h2>                    
                 </div>
                 <div>
+                  <CiSettings className=" text-2xl cursor-pointer hover:text-slate-500 duration-200 transition"/>
+                </div>   
+            </div>
 
-                </div>
+            <div className="flex items-center justify-between px-4 g-4 py-4">
+              <div className="w-10 h-10 rounded-full bg-slate-200"></div>
+              <div>
+                <input type="text" className=" border-2 border-gray-200 mx-4 w-80 h-full rounded-xl py-2 px-4  outline-none" placeholder="What is happening?!"/>
+              </div>
+              <div className="flex items-end justify-end gap-4 ">
+              <TfiGallery className=" text-xl text-primary cursor-pointer"/>
+              <HiOutlineGif className=" text-2xl text-primary cursor-pointer"/>
+              </div>
             </div>
-            <div className="border-t-[0.5px] border-b-[0.5px]  relative space-x-2 py-4 h-32">
-            <div className="flex items-center">
-                <div className="w-10 h-10 bg-slate-200 rounded-full flex-none"></div>
-                <div className="flex flex-col">
-                {/* <div className=" border-b-[0.5px] border-gray-400"> */}
-                    <input className="w-full h-full bg-transparent outline-none border-none border-b-[0.5px] border-gray-400 p-4 placeholder:text-lg" type="text" placeholder="What is happening?!"/>
-                {/* </div> */}
-                </div>
-            </div>
-            </div>
-            <div className="flex flex-col">
-                <button className=" bg-primary  rounded-full text-white px-6 py-2 w-full text-lg font-semibold hover:bg-opacity-90 transition duration-200">Post</button>
-            </div>
+
+           
 
 
           <div>
